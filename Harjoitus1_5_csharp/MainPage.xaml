@@ -8,7 +8,23 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
-    </Grid>
+    <RelativePanel>
+        <ComboBox
+            Name="menu"
+            Margin="70,200, 0 , 0"
+            Width="200">
+            <ComboBoxItem>Banaani</ComboBoxItem>
+            <ComboBoxItem>Omena</ComboBoxItem>
+            <ComboBoxItem>Mansikka</ComboBoxItem>
+            <ComboBoxItem>Hunajavesimeloni</ComboBoxItem>
+        </ComboBox>
+        <Rectangle
+            Name="box"
+            RelativePanel.AlignRightWithPanel="True"
+            Stroke="Black"
+            Width="600"
+            Height="300"
+            Margin="0,200, 70 , 0">
+        </Rectangle>
+    </RelativePanel>
 </Page>
