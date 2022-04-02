@@ -11,20 +11,33 @@
     <RelativePanel>
         <ComboBox
             Name="menu"
-            Margin="70,200, 0 , 0"
-            Width="200">
-            <ComboBoxItem>Banaani</ComboBoxItem>
-            <ComboBoxItem>Omena</ComboBoxItem>
-            <ComboBoxItem>Mansikka</ComboBoxItem>
-            <ComboBoxItem>Hunajavesimeloni</ComboBoxItem>
+            Margin="200,200, 0 , 0"
+            Width="200"
+            SelectionChanged="menu_SelectionChanged">
+            <ComboBoxItem>Kulta</ComboBoxItem>
+            <ComboBoxItem>Punainen</ComboBoxItem>
+            <ComboBoxItem>Valkoinen</ComboBoxItem>
+            <ComboBoxItem>Vihreä</ComboBoxItem>
+            <ComboBoxItem>Pinkki</ComboBoxItem>
         </ComboBox>
-        <Rectangle
+
+        <Border
             Name="box"
             RelativePanel.AlignRightWithPanel="True"
-            Stroke="Black"
             Width="600"
             Height="300"
-            Margin="0,200, 70 , 0">
-        </Rectangle>
+            Margin="0,200, 200 , 0">
+            <TextBlock
+                RelativePanel.AlignHorizontalCenterWith="box"
+                Foreground="Black"
+                Name="changingText"
+                FontSize="20"
+                Width="200"
+                Height="30"
+                Canvas.ZIndex="1">
+            </TextBlock>
+        </Border>
+        
+        
     </RelativePanel>
 </Page>

@@ -26,5 +26,44 @@ namespace Harjoitus1_5_csharp
         {
             this.InitializeComponent();
         }
+
+        private void menu_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            String comboText = ((ComboBoxItem)menu.SelectedItem).Content.ToString();
+
+            switch(comboText)
+            {
+                case "Kulta":
+                    changingText.Text = comboText;
+                    SolidColorBrush mySolidColorBrush = new SolidColorBrush(Windows.UI.Colors.Gold);
+                    box.Background = mySolidColorBrush;
+                    break;
+
+                case "Punainen":
+                    changingText.Text = "Punainen";
+                    SolidColorBrush mySolidColorBrush2 = new SolidColorBrush(Windows.UI.Colors.Tomato);
+                    box.Background = mySolidColorBrush2;
+                    break;
+
+                case "Valkoinen":
+                    changingText.Text = "Valkoinen";
+                    SolidColorBrush mySolidColorBrush3 = new SolidColorBrush(Windows.UI.Colors.SeaShell);
+                    box.Background = mySolidColorBrush3;
+                    break;
+
+                case "Vihreä":
+                    changingText.Text = "Vihreä";
+                    SolidColorBrush mySolidColorBrush4 = new SolidColorBrush(Windows.UI.Colors.DarkGreen);
+                    box.Background = mySolidColorBrush4;
+                    break;
+
+                case "Pinkki":
+                    changingText.Text = "Pinkki";
+                    SolidColorBrush mySolidColorBrush5 = new SolidColorBrush(Windows.UI.Colors.LightPink);
+                    box.Background = mySolidColorBrush5;
+                    break;
+            }
+            
+        }
     }
 }
